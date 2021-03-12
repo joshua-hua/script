@@ -13,6 +13,7 @@ hostname = *.1sapp.com
 
 */
 
+
 const coke = '米读极速版'
 const $ = Env(coke)
 
@@ -57,14 +58,14 @@ function mdjck() {
 if($request&&$request.url.indexOf("token")>=0) {
    const mdjurl = $request.url.split('?')[1]
    if(mdjurl)     $.setdata(mdjurl,`mdjurl${status}`)
-   $.log(`[${coke}] 获取mdjurl请求: 成功,mdjurl: ${fqxsurl}`)
+   $.log(`[${coke}] 获取mdjurl请求: 成功,mdjurl: ${mdjurl}`)
    $.msg(`mdjurl${status}: 成功🎉`, ``)
    const host = $request.headers['Host']
    if(host)   $.setdata(host,'host')
    $.log(`[${coke}] 获取host请求: 成功,host: ${host}`)
    const mdj = JSON.stringify($request.headers)
     if(mdj)    $.setdata(mdj,`mdj${status}`)
-    $.log(`[${coke}] 获取mdj请求: 成功,mdj: ${fqxs}`)
+    $.log(`[${coke}] 获取mdj请求: 成功,mdj: ${mdj}`)
     $.msg(`mdj${status}: 成功🎉`, ``)
 }
 }
