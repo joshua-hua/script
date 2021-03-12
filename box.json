@@ -7,24 +7,24 @@
             "settings": [{
                 "id": "cfzConcurrency",
                 "val": "1",
-                "name": "并发执行账号数",
+                "name": "并发执行账号数1",
                 "type": "text",
-                "desc": "默认单账号跑任务，指定大于1的数值时，将并发执行多个账号的任务，请勿设置过大，避免NE工具崩溃（太大估计会崩溃吧）"
+                "desc": "默认单账号跑任务，指定大于1的数值时，将并发执行多个账号的任务，请勿设置过大，避免NE工具崩溃（太大估计会崩溃吧）1"
               }, {
             "id": "cfzstatus",
-            "name": "当前账号",
+            "name": "当前账号1",
             "val": "1",
             "type": "number",
-            "desc": "当前账号对应"
+            "desc": "当前账号对应1"
     },
     {
             "id": "cfzcount",
-            "name": "账号个数",
+            "name": "账号个数1",
             "val": "1",
             "type": "number",
-            "desc": "需要几个账号，数字为几"
+            "desc": "需要几个账号，数字为几?"
     }],
-            "repo": "https://github.com/age174/-/blob/main/cfz.js",
+            "repo": "https://github.com/joshua-hua/script/blob/main/cfz.js",
             "icons": ["https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg", "https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/cfz.js"
+            "script": "https://raw.githubusercontent.com/joshua-hua/script/main/cfz.js"
     }
