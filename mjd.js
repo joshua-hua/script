@@ -28,21 +28,56 @@ const logs = 0; //0为关闭日志，1为开启
 var hour = ''
     var minute = ''
 
-    !(async() => {
-    //CK运行
-    let ismdjck = typeof $request !== 'undefined'
-        if (ismdjck) {
-            mdjck();
-            $.done()
-        }
+if ($.isNode()) {
+   hour = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getHours();
+   minute = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getMinutes();
+}else{
+   hour = (new Date()).getHours();
+   minute = (new Date()).getMinutes();
+}
+//CK运行
+let isfqxsck = typeof $request !== 'undefined'
+if (isfqxsck) {
+   fqxsck();
+   $.done()
+}
 
+if ($.isNode()) {
+   if (process.env.FQXSURL && process.env.FQXSURL .indexOf('#') > -1) {
+   fqxsurl = process.env.FQXSURL .split('#');
+   console.log(`您选择的是用"#"隔开\n`)
+  }
+  else if (process.env.FQXSURL && process.env.FQXSURL .indexOf('\n') > -1) {
+   fqxsurl = process.env.FQXSURL .split('\n');
+   console.log(`您选择的是用换行隔开\n`)
+  } else {
+   fqxsurl = process.env.FQXSURL .split()
+  };
+  if (process.env.FQXS&& process.env.FQXS.indexOf('#') > -1) {
+   fqxs= process.env.FQXS.split('#');
+   console.log(`您选择的是用"#"隔开\n`)
+  }
+  else if (process.env.FQXS&& process.env.FQXS.indexOf('\n') > -1) {
+   fqxs= process.env.FQXS.split('\n');
+   console.log(`您选择的是用换行隔开\n`)
+  } else {
+   fqxs= process.env.FQXS.split()
+  };
+    console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
+    console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
+ } else {
         mdjurlArr.push($.getdata('mdjsurl'))
         fqxsArr.push($.getdata('mdj'))
         let fqxscount = ($.getval('mdjcount') || '1');
-    for (let i = 2; i <= fqxscount; i++) {
+  for (let i = 2; i <= fqxscount; i++) {
         fqxsurlArr.push($.getdata(`mdjurl${i}`))
         fqxsArr.push($.getdata(`mdj${i}`))
-    }
+  }
+}
+
+    !(async() => {
+    //CK运行
+
 
     if (!mdjurlArr[0] && !mdjArr[0]) {
         $.msg($.name, '【提示】请先获取米读极速版一cookie')
