@@ -36,42 +36,20 @@ if ($.isNode()) {
    minute = (new Date()).getMinutes();
 }
 //CK运行
-let isfqxsck = typeof $request !== 'undefined'
-if (isfqxsck) {
-   fqxsck();
+let ismdjck = typeof $request !== 'undefined'
+if (ismdjck) {
+   mdjck();
    $.done()
 }
 
-if ($.isNode()) {
-   if (process.env.FQXSURL && process.env.FQXSURL .indexOf('#') > -1) {
-   fqxsurl = process.env.FQXSURL .split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.FQXSURL && process.env.FQXSURL .indexOf('\n') > -1) {
-   fqxsurl = process.env.FQXSURL .split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   fqxsurl = process.env.FQXSURL .split()
-  };
-  if (process.env.FQXS&& process.env.FQXS.indexOf('#') > -1) {
-   fqxs= process.env.FQXS.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.FQXS&& process.env.FQXS.indexOf('\n') > -1) {
-   fqxs= process.env.FQXS.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   fqxs= process.env.FQXS.split()
-  };
-    console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
-    console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
- } else {
+if (!$.isNode()) {
+
         mdjurlArr.push($.getdata('mdjsurl'))
-        fqxsArr.push($.getdata('mdj'))
-        let fqxscount = ($.getval('mdjcount') || '1');
-  for (let i = 2; i <= fqxscount; i++) {
-        fqxsurlArr.push($.getdata(`mdjurl${i}`))
-        fqxsArr.push($.getdata(`mdj${i}`))
+        mdjArr.push($.getdata('mdj'))
+        let mdjcount = ($.getval('mdjcount') || '1');
+  for (let i = 2; i <= mdjcount; i++) {
+        mdjurlArr.push($.getdata(`mdjurl${i}`))
+        mdjArr.push($.getdata(`mdj${i}`))
   }
 }
 
