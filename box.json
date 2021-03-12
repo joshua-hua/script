@@ -11,7 +11,9 @@
             "name": "春风转1",
             "keys": ["cfzurl", "cfzhd", "cfzurl2", "cfzhd2","cfzurl3", "cfzhd3", "cfzurl4", "cfzhd4","cfzurl5", "cfzhd5", "cfzurl6", "cfzhd6", "cfzurl7", "cfzhd7","cfzurl8", "cfzhd8", "cfzurl9", "cfzhd9", "cfzurl10", "cfzhd10"],
             "author": "@feizao",
-            "settings": [{
+            "settings": [
+/*
+                {
                 "id": "cfzConcurrency",
                 "val": "1",
                 "name": "并发执行账号数1",
@@ -34,6 +36,29 @@
             "repo": "https://github.com/joshua-hua/script/blob/main/cfz.js",
             "icons": ["https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg", "https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg"],
             "script": "https://raw.githubusercontent.com/joshua-hua/script/main/cfz.js"
-    }
+    },*/
+    {
+            "id": "mdj",
+            "name": "米读极速版",
+            "keys": ["mdjurl", "mdj"],
+            "author": "@joshua-hua",
+            "settings": [{
+                "id": "cfzConcurrency",
+                "val": "1",
+                "name": "并发执行账号数1",
+                "type": "text",
+                "desc": "默认单账号跑任务，指定大于1的数值时，将并发执行多个账号的任务，请勿设置过大，避免NE工具崩溃（太大估计会崩溃吧）1"
+              }, {
+            "id": "mdjstatus",
+            "name": "当前账号1",
+            "val": "1",
+            "type": "number",
+            "desc": "当前账号对应1"
+    }],
+            "repo": "https://github.com/joshua-hua/script/blob/main/mjd.js",
+            "icons": ["https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg", "https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg"],
+            "script": "https://raw.githubusercontent.com/joshua-hua/script/main/mjd.js"
+    },
+                        
 ]
 }
