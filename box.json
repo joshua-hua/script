@@ -43,11 +43,11 @@
             "keys": ["mdjurl", "mdj"],
             "author": "@joshua-hua",
             "settings": [{
-                "id": "cfzConcurrency",
-                "val": "1",
-                "name": "并发执行账号数1",
-                "type": "text",
-                "desc": "默认单账号跑任务，指定大于1的数值时，将并发执行多个账号的任务，请勿设置过大，避免NE工具崩溃（太大估计会崩溃吧）1"
+            "id": "tz",
+            "name": "静默运行",
+            "val": "1",
+            "type": "number",
+            "desc": "0为不通知，1为全部通知"
               }, {
             "id": "mdjstatus",
             "name": "当前账号1",
