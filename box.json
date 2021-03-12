@@ -2,8 +2,8 @@
             "id": "joshua-hua.app.sub",
             "name": "可樂应用订阅",
             "author": "@joshua-hua",
-            "icon": "https://s3.ax1x.com/2021/02/17/ygLAIA.jpg",
-            "repo": "https://github.com/joshua-hua/script/edit/main/",
+            "icon": "https://avatars.githubusercontent.com/u/8516782?s=400&u=36484dc6600a200b4e645985161e6e4054fd872f&v=4g",
+            "repo": "https://github.com/joshua-hua/script/",
             "apps": [
 
     {
@@ -31,9 +31,9 @@
             "type": "number",
             "desc": "需要几个账号，数字为几1"
     }],
-            "repo": "https://github.com/age174/-/blob/main/cfz.js",
+            "repo": "https://github.com/joshua-hua/script/blob/main/cfz.js",
             "icons": ["https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg", "https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/cfz.js"
+            "script": "https://raw.githubusercontent.com/joshua-hua/script/main/cfz.js"
     }
 ]
 }
