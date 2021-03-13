@@ -3,13 +3,13 @@
 
 #surge
 
-米读极速版 = type=http-request,requires-header=1,max-size=0,script-path=https://raw.githubusercontent.com/joshua-hua/script/main/mjd.js,script-update-interval=0
+米读极速版 = type=http-request,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/joshua-hua/script/main/mjd.js,script-update-interval=0
 
 
 
 
 [MITM]
-hostname = *.1sapp.com
+hostname = *.midukanshu.com
 
  */
 
